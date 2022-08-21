@@ -48,7 +48,6 @@ class ViewController: UIViewController {
                 btnCheckDone.setImage(UIImage(systemName: "square"), for: UIControl.State.normal)
             }
         }
-        
     }
 
     @IBAction func actionSortTodo(_ sender: UIButton) {
