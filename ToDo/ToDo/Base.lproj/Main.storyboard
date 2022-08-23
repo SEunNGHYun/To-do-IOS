@@ -201,6 +201,9 @@
                                                     </children>
                                                 </menu>
                                                 <state key="normal" title="중요도"/>
+                                                <connections>
+                                                    <action selector="btnChangeImportant:" destination="b77-uD-Od8" eventType="touchDown" id="PV1-SI-QdU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -406,6 +409,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DeB-Vl-gVd"/>
                     <connections>
+                        <outlet property="btnImportant" destination="xeK-fR-CmG" id="MmY-Hk-ncg"/>
                         <outlet property="tdToDo" destination="EwU-H0-fKi" id="tay-wS-4Ni"/>
                         <outlet property="tfMemo" destination="8Lk-yZ-cHx" id="AvT-4X-epG"/>
                     </connections>
@@ -447,7 +451,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSr-um-KnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-648" y="474"/>
+            <point key="canvasLocation" x="-825" y="495"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g32-CG-gTf">

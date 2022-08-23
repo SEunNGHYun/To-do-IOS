@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  ToDo
-//
-//  Created by 윤승현 on 2022/08/19.
-//
-
 import UIKit
 
 struct Todo {

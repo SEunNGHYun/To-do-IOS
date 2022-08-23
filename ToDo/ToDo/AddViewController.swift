@@ -1,11 +1,6 @@
-//
-//  ViewController.swift
-//  ToDo
-//
-//  Created by 윤승현 on 2022/08/19.
-//
-
 import UIKit
+import DropDown
+
 //todos.append([
 //    "todo" : "밥먹기",
 //    "start" : "2022-08-12",
@@ -20,17 +15,27 @@ import UIKit
 class AddViewController: UIViewController {
     @IBOutlet var tdToDo: UITextField!
     @IBOutlet var tfMemo: UITextField!
+    @IBOutlet var btnImportant: UIButton!
     
     var todo = Dictionary<String, Any>()
     
     var reDays = [String]()
-    var setAlarm = false
+    var alarmSet = false
     var startDay : String? = nil
     var endDay : String? = nil
+    var important : String? = nil
+    let menu = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        menu.dataSource = [ "상", "중", "하" ]
+        menu.anchorView = btnImportant
+        menu.bottomOffset = CGPoint(x: 0, y: btnImportant.bounds.height)
+        menu.selectionAction = { index, title in 
+            self.important = title
+            self.btnImportant.setTitle(title, for: UIControl.State.normal)
+        }
     }
 
     @IBAction func choiceStartDay(_ sender: UIDatePicker) {
@@ -52,7 +57,7 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func toggleAlarm(_ sender: UISwitch) {
-        setAlarm = sender.isOn
+        alarmSet = sender.isOn
     }
     
     @IBAction func addTodo(_ sender: UIButton) {
@@ -61,6 +66,8 @@ class AddViewController: UIViewController {
             todo["todo"] = tdToDo.text
             todo["start"] = startDay
             todo["end"] = endDay
+            todo["alarms"] = alarmSet
+            todo["important"] = important
             todo["notes"] = tfMemo.text
             todo["done"] = false
             //서버에 전송
@@ -86,6 +93,11 @@ class AddViewController: UIViewController {
             return false
         }
         return true
+    }
+
+    @IBAction func btnChangeImportant(_ sender: UIButton) {
+        menu.show()
+        print("click")
     }
 }
 
