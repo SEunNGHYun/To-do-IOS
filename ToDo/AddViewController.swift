@@ -16,6 +16,7 @@ class AddViewController: UIViewController {
     @IBOutlet var tdToDo: UITextField!
     @IBOutlet var tfMemo: UITextField!
     @IBOutlet var btnImportant: UIButton!
+    @IBOutlet var lblToday: UILabel!
     
     var todo = Dictionary<String, Any>()
     
@@ -32,10 +33,14 @@ class AddViewController: UIViewController {
         menu.dataSource = [ "상", "중", "하" ]
         menu.anchorView = btnImportant
         menu.bottomOffset = CGPoint(x: 0, y: btnImportant.bounds.height)
-        menu.selectionAction = { index, title in 
+        menu.selectionAction = { index, title in
             self.important = title
             self.btnImportant.setTitle(title, for: UIControl.State.normal)
         }
+        let today = Date()
+        let date = DateFormatter()
+        date.dateFormat = "yyyy.MM.dd"
+        lblToday.text = date.string(from: today)
     }
 
     @IBAction func choiceStartDay(_ sender: UIDatePicker) {
@@ -71,6 +76,8 @@ class AddViewController: UIViewController {
             todo["notes"] = tfMemo.text
             todo["done"] = false
             //서버에 전송
+            
+            _ = navigationController?.popViewController(animated: true)
         }else{
             let alert = UIAlertController(title: "입력값 확인", message: "내용을 확인해 주세요", preferredStyle: UIAlertController.Style.alert)
             let alertAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
@@ -79,12 +86,13 @@ class AddViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         print("todo: " , todo)
+        
     }
     
     @IBAction func cancelTodo(_ sender: Any) {
         startDay = nil
         endDay = nil
-        
+        _ = navigationController?.popViewController(animated: true)
         //todo 목록으로 가기
     }
     
@@ -97,7 +105,7 @@ class AddViewController: UIViewController {
 
     @IBAction func btnChangeImportant(_ sender: UIButton) {
         menu.show()
-        print("click")
     }
+    
 }
 

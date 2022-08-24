@@ -207,16 +207,16 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-H0-fKi">
-                                        <rect key="frame" x="0.0" y="107.66666666666666" width="358" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-H0-fKi">
+                                        <rect key="frame" x="0.0" y="107.66666666666666" width="358" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="z4z-Kj-isi"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="z4z-Kj-isi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-S8-z3v">
-                                        <rect key="frame" x="0.0" y="157.66666666666666" width="358" height="114.99999999999997"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-S8-z3v">
+                                        <rect key="frame" x="0.0" y="155.66666666666666" width="358" height="114.99999999999997"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1r0-fR-Kjd">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="115"/>
@@ -239,8 +239,8 @@
                                             <constraint firstAttribute="height" constant="115" id="4BU-bD-ZmD"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbH-xy-hhs">
-                                        <rect key="frame" x="0.0" y="272.66666666666669" width="358" height="115"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbH-xy-hhs">
+                                        <rect key="frame" x="0.0" y="270.66666666666669" width="358" height="115"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종료일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGG-iQ-21p" userLabel="종료일">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="115"/>
@@ -263,8 +263,8 @@
                                             <constraint firstAttribute="height" constant="115" id="P6y-Kd-ML2"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="813-cf-vQE">
-                                        <rect key="frame" x="0.0" y="387.66666666666669" width="358" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="813-cf-vQE">
+                                        <rect key="frame" x="0.0" y="385.66666666666669" width="358" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림받기  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG0-PT-khD">
                                                 <rect key="frame" x="0.0" y="0.0" width="309" height="31"/>
@@ -280,14 +280,14 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반복" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qJ-js-ial">
-                                        <rect key="frame" x="0.0" y="418.66666666666669" width="358" height="21.666666666666686"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="반복" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qJ-js-ial">
+                                        <rect key="frame" x="0.0" y="416.66666666666669" width="358" height="21.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fn4-aJ-cll">
-                                        <rect key="frame" x="0.0" y="440.33333333333337" width="358" height="70"/>
+                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" alignment="center" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fn4-aJ-cll">
+                                        <rect key="frame" x="0.0" y="438.33333333333337" width="358" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKV-Rr-MQR">
                                                 <rect key="frame" x="0.0" y="19.666666666666629" width="36.333333333333336" height="31"/>
@@ -357,14 +357,14 @@
                                             <constraint firstAttribute="height" constant="70" id="gs0-PF-9iq"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메모" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-bF-gZa">
-                                        <rect key="frame" x="0.0" y="510.33333333333343" width="358" height="21.666666666666686"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="메모" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-bF-gZa">
+                                        <rect key="frame" x="0.0" y="508.33333333333343" width="358" height="21.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Lk-yZ-cHx">
-                                        <rect key="frame" x="0.0" y="532" width="358" height="86"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Lk-yZ-cHx">
+                                        <rect key="frame" x="0.0" y="530" width="358" height="88"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -410,6 +410,7 @@
                     <navigationItem key="navigationItem" id="DeB-Vl-gVd"/>
                     <connections>
                         <outlet property="btnImportant" destination="xeK-fR-CmG" id="MmY-Hk-ncg"/>
+                        <outlet property="lblToday" destination="s5N-ml-EYN" id="8sj-Bg-5dQ"/>
                         <outlet property="tdToDo" destination="EwU-H0-fKi" id="tay-wS-4Ni"/>
                         <outlet property="tfMemo" destination="8Lk-yZ-cHx" id="AvT-4X-epG"/>
                     </connections>
