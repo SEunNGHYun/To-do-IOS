@@ -297,6 +297,9 @@
                                                         <color key="strokeColor" systemColor="labelColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnMon:" destination="b77-uD-Od8" eventType="touchUpInside" id="0iK-Be-mHm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-7v-dgl">
                                                 <rect key="frame" x="53.666666666666671" y="19.666666666666629" width="36.333333333333329" height="31"/>
@@ -306,6 +309,9 @@
                                                         <color key="strokeColor" systemColor="labelColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnTue:" destination="b77-uD-Od8" eventType="touchUpInside" id="k2o-Tr-zLH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4x-jx-xks">
                                                 <rect key="frame" x="107.33333333333333" y="19.666666666666629" width="36.333333333333329" height="31"/>
@@ -315,6 +321,9 @@
                                                         <color key="strokeColor" systemColor="labelColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnWed:" destination="b77-uD-Od8" eventType="touchUpInside" id="Hzp-Qi-trg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWi-5Z-kFM">
                                                 <rect key="frame" x="161" y="19.666666666666629" width="36.333333333333343" height="31"/>
@@ -324,6 +333,9 @@
                                                         <color key="strokeColor" systemColor="labelColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnThu:" destination="b77-uD-Od8" eventType="touchUpInside" id="vfZ-BO-iiW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c46-um-N2y">
                                                 <rect key="frame" x="214.33333333333334" y="19.666666666666629" width="36.333333333333343" height="31"/>
@@ -333,6 +345,9 @@
                                                         <color key="strokeColor" systemColor="labelColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnFri:" destination="b77-uD-Od8" eventType="touchUpInside" id="uaH-ZK-wiS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-Lc-Akg">
                                                 <rect key="frame" x="268" y="19.666666666666629" width="36.333333333333314" height="31"/>
@@ -342,6 +357,9 @@
                                                         <color key="strokeColor" systemColor="labelColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnSat:" destination="b77-uD-Od8" eventType="touchUpInside" id="eV9-h0-OjT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXU-AF-nHa">
                                                 <rect key="frame" x="321.66666666666669" y="19.666666666666629" width="36.333333333333314" height="31"/>
@@ -351,6 +369,9 @@
                                                         <color key="strokeColor" systemColor="labelColor"/>
                                                     </backgroundConfiguration>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnSun:" destination="b77-uD-Od8" eventType="touchUpInside" id="V2i-kp-Jm0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -409,7 +430,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="DeB-Vl-gVd"/>
                     <connections>
+                        <outlet property="btnFriday" destination="c46-um-N2y" id="wW8-Ak-1be"/>
                         <outlet property="btnImportant" destination="xeK-fR-CmG" id="MmY-Hk-ncg"/>
+                        <outlet property="btnMonday" destination="NKV-Rr-MQR" id="3Ww-lP-535"/>
+                        <outlet property="btnSaturday" destination="Kwt-Lc-Akg" id="NRS-EE-Gow"/>
+                        <outlet property="btnSunday" destination="rXU-AF-nHa" id="C9a-Dw-Ew6"/>
+                        <outlet property="btnThursday" destination="TWi-5Z-kFM" id="g26-xa-hKZ"/>
+                        <outlet property="btnTuesday" destination="hT5-7v-dgl" id="YcY-4H-2ke"/>
+                        <outlet property="btnWednesday" destination="r4x-jx-xks" id="qUr-th-xew"/>
                         <outlet property="lblToday" destination="s5N-ml-EYN" id="8sj-Bg-5dQ"/>
                         <outlet property="tdToDo" destination="EwU-H0-fKi" id="tay-wS-4Ni"/>
                         <outlet property="tfMemo" destination="8Lk-yZ-cHx" id="AvT-4X-epG"/>
@@ -417,7 +445,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGc-fp-zGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2066" y="-301"/>
+            <point key="canvasLocation" x="2472" y="-344"/>
         </scene>
         <!--My Activity View Controller-->
         <scene sceneID="gsr-4q-IeQ">

@@ -12,6 +12,10 @@ import DropDown
 //    "done" : false
 //])//테스트 데이터 설정
 
+protocol AddDelegate {
+    func AddTodo (_ controller: AddViewController, todos : Dictionary<String, Any>)
+}
+
 class AddViewController: UIViewController {
     @IBOutlet var tdToDo: UITextField!
     @IBOutlet var tfMemo: UITextField!
@@ -26,6 +30,16 @@ class AddViewController: UIViewController {
     var endDay : String? = nil
     var important : String? = nil
     let menu = DropDown()
+    var ReDays = [String]()
+    
+    @IBOutlet var btnMonday: UIButton!
+    @IBOutlet var btnTuesday: UIButton!
+    @IBOutlet var btnWednesday: UIButton!
+    @IBOutlet var btnThursday: UIButton!
+    @IBOutlet var btnFriday: UIButton!
+    @IBOutlet var btnSaturday: UIButton!
+    @IBOutlet var btnSunday: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,5 +121,33 @@ class AddViewController: UIViewController {
         menu.show()
     }
     
+    @IBAction func btnMon(_ sender: UIButton) {
+        ReDays.append("월")
+        btnMonday.backgroundColor = .red
+    }
+    @IBAction func btnTue(_ sender: UIButton) {
+        ReDays.append("화")
+        btnTuesday.backgroundColor = .red
+    }
+    @IBAction func btnWed(_ sender: UIButton) {
+        ReDays.append("수")
+        btnWednesday.backgroundColor = .red
+    }
+    @IBAction func btnThu(_ sender: UIButton) {
+        ReDays.append("목")
+        btnThursday.backgroundColor = .red
+    }
+    @IBAction func btnFri(_ sender: UIButton) {
+        ReDays.append("금")
+        btnFriday.backgroundColor = .red
+    }
+    @IBAction func btnSat(_ sender: UIButton) {
+        ReDays.append("토")
+        btnSaturday.backgroundColor = .red
+    }
+    @IBAction func btnSun(_ sender: UIButton) {
+        ReDays.append("일")
+        btnSunday.backgroundColor = .red
+    }
 }
 
