@@ -16,6 +16,7 @@
 		7FAEC60C28AF73140041D7E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FAEC60A28AF73140041D7E5 /* LaunchScreen.storyboard */; };
 		7FAEC61828AF75C70041D7E5 /* MyActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAEC61728AF75C70041D7E5 /* MyActivityViewController.swift */; };
 		7FAEC62328AF8C7B0041D7E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FAEC62228AF8C7B0041D7E5 /* Images.xcassets */; };
+		7FE82C9C28B754A90007928F /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE82C9B28B754A90007928F /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		7FAEC60D28AF73140041D7E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FAEC61728AF75C70041D7E5 /* MyActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyActivityViewController.swift; sourceTree = "<group>"; };
 		7FAEC62228AF8C7B0041D7E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7FE82C9B28B754A90007928F /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		D62032446224FFBAEA928E51 /* Pods-ToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.debug.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				7FAEC60328AF73130041D7E5 /* ViewController.swift */,
 				7FAEC61728AF75C70041D7E5 /* MyActivityViewController.swift */,
 				7F4ABB4528B5BBFE005327D8 /* AddViewController.swift */,
+				7FE82C9B28B754A90007928F /* TaskTableViewCell.swift */,
 				7FAEC62228AF8C7B0041D7E5 /* Images.xcassets */,
 				7FAEC60528AF73130041D7E5 /* Main.storyboard */,
 				7FAEC60A28AF73140041D7E5 /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				7FAEC60428AF73130041D7E5 /* ViewController.swift in Sources */,
 				7F4ABB4628B5BBFE005327D8 /* AddViewController.swift in Sources */,
+				7FE82C9C28B754A90007928F /* TaskTableViewCell.swift in Sources */,
 				7FAEC60028AF73130041D7E5 /* AppDelegate.swift in Sources */,
 				7FAEC60228AF73130041D7E5 /* SceneDelegate.swift in Sources */,
 				7FAEC61828AF75C70041D7E5 /* MyActivityViewController.swift in Sources */,
