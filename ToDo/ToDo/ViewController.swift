@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var lblTodo: UILabel!
     @IBOutlet var btnCheckDone: UIButton!
+    @IBOutlet var lblToday: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,11 @@ class ViewController: UIViewController {
                 btnCheckDone.setImage(UIImage(systemName: "square"), for: UIControl.State.normal)
             }
         }
+        
+        let today = Date()
+        let date = DateFormatter()
+        date.dateFormat = "yyyy.MM.dd"
+        lblToday.text = date.string(from: today)
     }
 
     @IBAction func actionSortTodo(_ sender: UIButton) {

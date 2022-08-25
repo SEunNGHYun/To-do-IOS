@@ -143,6 +143,7 @@
                     <navigationItem key="navigationItem" id="mEq-3b-UKx"/>
                     <connections>
                         <outlet property="btnCheckDone" destination="lkD-yP-LJh" id="TWm-k3-8Nd"/>
+                        <outlet property="lblToday" destination="7uz-CW-BFp" id="7F5-QF-K2E"/>
                         <outlet property="lblTodo" destination="fZq-qD-NgU" id="RoO-Ox-H9Q"/>
                     </connections>
                 </viewController>
@@ -301,7 +302,7 @@
                                                     <action selector="btnMon:" destination="b77-uD-Od8" eventType="touchUpInside" id="0iK-Be-mHm"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-7v-dgl">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-7v-dgl">
                                                 <rect key="frame" x="53.666666666666671" y="19.666666666666629" width="36.333333333333329" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="화" cornerStyle="medium">
@@ -313,7 +314,7 @@
                                                     <action selector="btnTue:" destination="b77-uD-Od8" eventType="touchUpInside" id="k2o-Tr-zLH"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4x-jx-xks">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4x-jx-xks">
                                                 <rect key="frame" x="107.33333333333333" y="19.666666666666629" width="36.333333333333329" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="수">
@@ -325,7 +326,7 @@
                                                     <action selector="btnWed:" destination="b77-uD-Od8" eventType="touchUpInside" id="Hzp-Qi-trg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWi-5Z-kFM">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWi-5Z-kFM">
                                                 <rect key="frame" x="161" y="19.666666666666629" width="36.333333333333343" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="목">
@@ -337,7 +338,7 @@
                                                     <action selector="btnThu:" destination="b77-uD-Od8" eventType="touchUpInside" id="vfZ-BO-iiW"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c46-um-N2y">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c46-um-N2y">
                                                 <rect key="frame" x="214.33333333333334" y="19.666666666666629" width="36.333333333333343" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="금">
@@ -349,7 +350,7 @@
                                                     <action selector="btnFri:" destination="b77-uD-Od8" eventType="touchUpInside" id="uaH-ZK-wiS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-Lc-Akg">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-Lc-Akg">
                                                 <rect key="frame" x="268" y="19.666666666666629" width="36.333333333333314" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="토">
@@ -361,7 +362,7 @@
                                                     <action selector="btnSat:" destination="b77-uD-Od8" eventType="touchUpInside" id="eV9-h0-OjT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXU-AF-nHa">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXU-AF-nHa">
                                                 <rect key="frame" x="321.66666666666669" y="19.666666666666629" width="36.333333333333314" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="일">

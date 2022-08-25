@@ -5,7 +5,7 @@ import DropDown
 //    "todo" : "밥먹기",
 //    "start" : "2022-08-12",
 //    "end" : "2022-08-14",
-//    "ReDays" : ["월"],
+//    "reDays" : ["월"],
 //    "alarms" : false ,
 //    "important" : "상",
 //    "notes" : "밥먹고 잘자기",
@@ -24,13 +24,12 @@ class AddViewController: UIViewController {
     
     var todo = Dictionary<String, Any>()
     
-    var reDays = [String]()
     var alarmSet = false
     var startDay : String? = nil
     var endDay : String? = nil
     var important : String? = nil
     let menu = DropDown()
-    var ReDays = [String]()
+    var reDays = [String]()
     
     @IBOutlet var btnMonday: UIButton!
     @IBOutlet var btnTuesday: UIButton!
@@ -55,6 +54,9 @@ class AddViewController: UIViewController {
         let date = DateFormatter()
         date.dateFormat = "yyyy.MM.dd"
         lblToday.text = date.string(from: today)
+        date.dateFormat = "yyyy-MM-dd"
+        startDay = date.string(from: today)
+        endDay = date.string(from: today)
     }
 
     @IBAction func choiceStartDay(_ sender: UIDatePicker) {
@@ -85,12 +87,13 @@ class AddViewController: UIViewController {
             todo["todo"] = tdToDo.text
             todo["start"] = startDay
             todo["end"] = endDay
+            todo["reDays"] = reDays
             todo["alarms"] = alarmSet
             todo["important"] = important
             todo["notes"] = tfMemo.text
             todo["done"] = false
             //서버에 전송
-            
+            print("data 확인 : ", todo)
             _ = navigationController?.popViewController(animated: true)
         }else{
             let alert = UIAlertController(title: "입력값 확인", message: "내용을 확인해 주세요", preferredStyle: UIAlertController.Style.alert)
@@ -122,32 +125,60 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func btnMon(_ sender: UIButton) {
-        ReDays.append("월")
-        btnMonday.backgroundColor = .red
+        if(reDays.contains("월")){
+            reDays = reDays.filter(){ $0 != "월"}
+            btnMonday.backgroundColor = .white
+        }else{
+            reDays.append("월")
+        }
     }
     @IBAction func btnTue(_ sender: UIButton) {
-        ReDays.append("화")
-        btnTuesday.backgroundColor = .red
+        if(reDays.contains("화")){
+            reDays = reDays.filter(){ $0 != "화"}
+            btnTuesday.backgroundColor = .white
+        }else{
+            reDays.append("화")
+        }
     }
     @IBAction func btnWed(_ sender: UIButton) {
-        ReDays.append("수")
-        btnWednesday.backgroundColor = .red
+        if(reDays.contains("수")){
+            reDays = reDays.filter(){ $0 != "수"}
+            btnWednesday.backgroundColor = .white
+        }else{
+            reDays.append("수")
+        }
     }
     @IBAction func btnThu(_ sender: UIButton) {
-        ReDays.append("목")
-        btnThursday.backgroundColor = .red
+        if(reDays.contains("목")){
+            reDays = reDays.filter(){ $0 != "목"}
+            btnThursday.backgroundColor = .white
+        }else{
+            reDays.append("목")
+        }
     }
     @IBAction func btnFri(_ sender: UIButton) {
-        ReDays.append("금")
-        btnFriday.backgroundColor = .red
-    }
+        if(reDays.contains("금")){
+            reDays = reDays.filter(){ $0 != "금"}
+            btnFriday.backgroundColor = .white
+        }else{
+            reDays.append("금")
+        }
+   }
     @IBAction func btnSat(_ sender: UIButton) {
-        ReDays.append("토")
-        btnSaturday.backgroundColor = .red
+        if(reDays.contains("토")){
+            reDays = reDays.filter(){ $0 != "토"}
+            btnSaturday.backgroundColor = .white
+        }else{
+            reDays.append("토")
+        }
     }
     @IBAction func btnSun(_ sender: UIButton) {
-        ReDays.append("일")
-        btnSunday.backgroundColor = .red
+        if(reDays.contains("일")){
+            reDays = reDays.filter(){ $0 != "일"}
+            btnSunday.backgroundColor = .white
+        }else{
+            reDays.append("일")
+        }
     }
 }
 
