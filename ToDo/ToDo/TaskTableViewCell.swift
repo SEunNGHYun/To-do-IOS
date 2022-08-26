@@ -9,6 +9,9 @@ import UIKit
 
 class TaskTableViewCell: UITableViewCell {
 
+    @IBOutlet var lblTodo: UILabel!
+    @IBOutlet var btnCheckDone: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

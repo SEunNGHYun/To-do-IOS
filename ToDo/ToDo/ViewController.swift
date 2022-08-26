@@ -3,21 +3,12 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
     var todos:Array = [Dictionary<String, Any>]()
     var percent : Int = 0
 
-    @IBOutlet var lblTodo: UILabel!
-    @IBOutlet var btnCheckDone: UIButton!
     @IBOutlet var lblToday: UILabel!
     @IBOutlet var lblTodoPercent: UILabel!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,32 +27,43 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ])//테스트 데이터 설정
         
         for Task in todos {
-            lblTodo.text = Task["todo"] as? String
             if Task["done"] as? Bool == true {
-                btnCheckDone.setImage(UIImage(systemName: "checkmark.square.fill"), for: UIControl.State.normal)
                 percent = percent + 1
-            }else{
-                btnCheckDone.setImage(UIImage(systemName: "square"), for: UIControl.State.normal)
             }
-            print("percent", percent, todos.count)
-            percent = (percent / todos.count) * 100
-            print("percent", percent)
-            //done이 False인지 True인지에 따라 Checkbox의 모양을 변경
-            //done이면 오늘의 달성율을 계산하기 위해 값 계산
-            lblTodoPercent.text = "\(percent)%"
         }
+        
+        print("percent", percent, todos.count)
+        percent = (percent / todos.count) * 100
+        print("percent", percent)
+        //done이 False인지 True인지에 따라 Checkbox의 모양을 변경
+        //done이면 오늘의 달성율을 계산하기 위해 값 계산
+        lblTodoPercent.text = "\(percent)%"
         
         let today = Date()
         let date = DateFormatter()
         date.dateFormat = "yyyy.MM.dd"
         lblToday.text = date.string(from: today)
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
 
     @IBAction func actionSortTodo(_ sender: UIButton) {
         //원하는 순으로 정렬
     }
     
-    @IBAction func actionDetailTodo(_ sender: UIButton) {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todos.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
+        
+        cell.textLabel?.text = todos[indexPath.row]["todo"] as? String
+        return cell
+    }
+    
+    
+    
 }
 
