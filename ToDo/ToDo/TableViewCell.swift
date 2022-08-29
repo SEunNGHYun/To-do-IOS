@@ -1,17 +1,14 @@
 //
-//  TaskTableViewCell.swift
+//  TableViewCell.swift
 //  ToDo
 //
-//  Created by 윤승현 on 2022/08/25.
+//  Created by 윤승현 on 2022/08/29.
 //
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
-    @IBOutlet var lblTodo: UILabel!
-    @IBOutlet var imgCheckDone: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +19,5 @@ class TaskTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

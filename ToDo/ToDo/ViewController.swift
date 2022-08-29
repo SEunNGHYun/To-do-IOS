@@ -24,7 +24,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             "important" : "상",
             "notes" : "밥먹고 잘자기",
             "done" : true
-        ])//테스트 데이터 설정
+        ])
+        todos.append([
+            "todo" : "밥먹기",
+            "start" : "2022-08-12",
+            "end" : "2022-08-14",
+            "ReDays" : ["월"],
+            "alarms" : false ,
+            "important" : "상",
+            "notes" : "밥먹고 잘자기",
+            "done" : false
+        ])
+        //테스트 데이터 설정
         
         for Task in todos {
             if Task["done"] as? Bool == true {
@@ -46,6 +57,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        self.registerTableViewCells()
     }
 
     @IBAction func actionSortTodo(_ sender: UIButton) {
@@ -57,12 +70,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
-        
-        cell.textLabel?.text = todos[indexPath.row]["todo"] as? String
-        return cell
+        return UITableViewCell()
     }
     
+    func registerTableViewCells() {
+        let textFieldCell = UINib(nibName: "TableViewCell", bundle: nil)
+        
+        self.tableView.register(textFieldCell, forCellReuseIdentifier:  "TableViewCell")
+    }
     
     
 }
